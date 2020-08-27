@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+SELECT Customers 
+FROM (
+    SELECT c.Name Customers, CustomerId
+    FROM Customers c
+    LEFT JOIN Orders o ON c.Id = o.CustomerId
+) AS temp 
+WHERE CustomerId IS NULL;

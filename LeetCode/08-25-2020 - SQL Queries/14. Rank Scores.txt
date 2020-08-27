@@ -1,0 +1,16 @@
+# SELECT
+# 	v,
+# 	DENSE_RANK() OVER (
+# 		ORDER BY v
+# 	) my_dense_rank,
+# 	RANK() OVER (
+# 		ORDER BY v
+# 	) my_rank
+# FROM
+# 	sales.dense_rank_demo;
+    
+SELECT score, 
+    DENSE_RANK() OVER (
+        ORDER BY Score DESC
+    ) AS `Rank`
+    FROM Scores;
